@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://zero9-4c6b.onrender.com";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://manghani-bhai.onrender.com";
 export const api = axios.create({ baseURL: `${BACKEND_URL}/api` });
 
 api.interceptors.request.use((config) => {
