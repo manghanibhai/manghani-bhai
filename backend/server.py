@@ -28,6 +28,14 @@ db = client[db_name]
 
 # ---------- App ----------
 app = FastAPI(title="Manghani Toy World API")
+@app.get("/")
+def home():
+    return{
+        "status": "online",
+        "message": "Welcome to the Manghani Toy World API!",
+        "docs": "/docs"
+    }
+    return {"message": "Welcome to the Manghani Toy World API!"}
 api_router = APIRouter(prefix="/api")
 
 JWT_ALGORITHM = "HS256"
