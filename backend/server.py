@@ -403,12 +403,12 @@ async def list_customers(_: dict = Depends(require_admin)):
 DEFAULT_BRANDING = {
     "id": "branding",
     "brand_name": "Manghani Toy World",
-    "logo_url": "https://customer-assets.emergentagent.com/job_toy-world-admin/artifacts/z4l3xaxx_logo.PNG",
-    "favicon_url": "https://customer-assets.emergentagent.com/job_toy-world-admin/artifacts/z4l3xaxx_logo.PNG",
+    "logo_url": "https://customer-assets.manghani-toy-worldagent.com/job_toy-world-admin/artifacts/z4l3xaxx_logo.PNG",
+    "favicon_url": "https://customer-assets.manghani-toy-worldagent.com/job_toy-world-admin/artifacts/z4l3xaxx_logo.PNG",
     "primary_color": "#C85A4F",
     "secondary_color": "#E1A140",
     "banner_images": [
-        "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/fc4c4300110c80fbe6039350f1f8d3665b8f65bc1683a1e99697f0e7b8acce1b.png",
+        "https://static.prod-images.manghani-toy-worldagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/fc4c4300110c80fbe6039350f1f8d3665b8f65bc1683a1e99697f0e7b8acce1b.png",
     ],
     "hero_title": "Where Childhood Wonder Lives.",
     "hero_subtitle": "A boutique collection of premium, hand-picked toys for the modern Indian family. Crafted to spark imagination, built to last generations.",
@@ -553,19 +553,19 @@ async def startup():
             {
                 "title": "Classic Premium Teddy Bear",
                 "description": "Heirloom-quality plush teddy bear crafted from ultra-soft organic cotton. A timeless companion designed to be loved for generations. Hand-finished with attention to every detail.",
-                "images": ["https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/58041ea3c2488c6fa1328073a2068aa90dee1ac38501737e633033c46c8c0867.png"],
+                "images": ["https://static.prod-images.manghani-toy-worldagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/58041ea3c2488c6fa1328073a2068aa90dee1ac38501737e633033c46c8c0867.png"],
                 "price": 2499, "discounted_price": 1899, "stock": 24, "category": "Soft Toys", "featured": True,
             },
             {
                 "title": "Vintage Red RC Sports Car",
                 "description": "Precision-engineered remote control sports car with smooth steering, durable suspension and a beautiful retro-modern finish. 2.4GHz controller included. Ages 6+.",
-                "images": ["https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/e535252eb2fc02db09df62b1f51bd7ddb50895605104f13a190ce5fce7052432.png"],
+                "images": ["https://static.prod-images.manghani-toy-worldagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/e535252eb2fc02db09df62b1f51bd7ddb50895605104f13a190ce5fce7052432.png"],
                 "price": 3999, "discounted_price": 3299, "stock": 12, "category": "Remote Control", "featured": True,
             },
             {
                 "title": "Pastel Wooden Blocks Set",
                 "description": "A 50-piece set of beautifully finished pastel wooden blocks. Smooth, splinter-free edges, water-based non-toxic paint. Encourages spatial reasoning and creativity from age 2+.",
-                "images": ["https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/c6e6a34ff018b903b5efa7c11970bf5c876c6bc86725dbe84200fe7c6253b95d.png"],
+                "images": ["https://static.prod-images.manghani-toy-worldagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/c6e6a34ff018b903b5efa7c11970bf5c876c6bc86725dbe84200fe7c6253b95d.png"],
                 "price": 1799, "discounted_price": 1399, "stock": 36, "category": "Building Blocks", "featured": True,
             },
             {
