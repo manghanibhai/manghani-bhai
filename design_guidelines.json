@@ -1,0 +1,100 @@
+{
+  "project_name": "Manghani Toy World",
+  "theme": "light",
+  "archetype": "Pastel & Soft Boutique (Warm Cream & Earthy Accents)",
+  "vibe": "Ultra premium, modern, playful joyful warmth, Apple-level polish meets boutique toy shop wonder.",
+  "colors": {
+    "background": "#F9F6F0",
+    "surface": "#FFFFFF",
+    "surface_alt": "#F3EBE1",
+    "primary": "#C85A4F",
+    "primary_hover": "#B34A40",
+    "secondary": "#E1A140",
+    "secondary_hover": "#C98B30",
+    "text_heading": "#2C4C3B",
+    "text_body": "#4A5D53",
+    "text_muted": "#8A9992",
+    "border": "#EADECF",
+    "footer_bg": "#2C4C3B",
+    "footer_text": "#F9F6F0"
+  },
+  "typography": {
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap",
+    "headings": {
+      "family": "'Outfit', sans-serif",
+      "weight": "font-medium to font-bold",
+      "tracking": "tracking-tight",
+      "styling": "Never center by default; use large, expressive sizing (text-4xl to text-6xl+ for heroes)."
+    },
+    "body": {
+      "family": "'Figtree', sans-serif",
+      "weight": "font-normal",
+      "line_height": "leading-relaxed"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Use 2-3x more spacing than typical. p-8, p-12, p-16, py-24.",
+    "border_radius": "rounded-3xl for main containers/images. rounded-full for buttons and pills. Apple-style soft corners.",
+    "grid_strategy": "Bento Grid Protocol. Asymmetrical layouts for marketing sections, strict grid for product listings.",
+    "alignment": "Left-align headings and text for editorial feel. Optical alignment for icons."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#C85A4F] text-[#F9F6F0] rounded-full px-8 py-4 font-medium hover:bg-[#B34A40] transition-colors shadow-sm",
+      "secondary": "bg-[#E1A140] text-[#2C4C3B] rounded-full px-8 py-4 font-medium hover:bg-[#C98B30] transition-colors",
+      "whatsapp": "bg-[#25D366] text-white rounded-full px-6 py-3 font-medium hover:bg-[#1DA851] shadow-lg flex items-center gap-2"
+    },
+    "cards_products": "Cardless approach. bg-transparent. Large image with rounded-3xl. Text below image. Hover: image scale-up slightly. Use 'group' for hover effects.",
+    "header": "Sticky, glassmorphism on scroll (backdrop-blur-xl bg-[#F9F6F0]/80), crisp 1px border-b border-[#EADECF].",
+    "footer": "Massive space (py-24), dark background (#2C4C3B) with cream text (#F9F6F0). Large display text for the brand name.",
+    "inputs": "Shadcn UI customized: rounded-xl, border-[#EADECF], focus:ring-[#C85A4F], bg-white/50"
+  },
+  "motion_and_interactions": {
+    "hover_states": "Images scale up 105% softly. Buttons shift -translate-y-0.5 and increase shadow.",
+    "page_load": "Staggered fade-up for grid items. Use Framer Motion for smooth entrances.",
+    "scroll": "Use Lenis for smooth momentum scrolling if possible. Sticky elements for dynamic feel."
+  },
+  "media": {
+    "logo": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/ec480ede3ac3299e28644ad2985f2acaeef14f2f967ec7cc2b9d50029d0ba8ae.png",
+      "description": "Manghani Toy World Logo Icon"
+    },
+    "hero_banner": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/fc4c4300110c80fbe6039350f1f8d3665b8f65bc1683a1e99697f0e7b8acce1b.png",
+      "description": "Ultra-premium boutique toy store display"
+    },
+    "products": [
+      {
+        "category": "Soft Toys",
+        "url": "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/58041ea3c2488c6fa1328073a2068aa90dee1ac38501737e633033c46c8c0867.png",
+        "name": "Classic Premium Teddy Bear"
+      },
+      {
+        "category": "RC Cars",
+        "url": "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/e535252eb2fc02db09df62b1f51bd7ddb50895605104f13a190ce5fce7052432.png",
+        "name": "Vintage Red RC Sports Car"
+      },
+      {
+        "category": "Educational Toys",
+        "url": "https://static.prod-images.emergentagent.com/jobs/6a7ee1f7-7ad6-4f10-a934-f9445d1ad5c7/images/c6e6a34ff018b903b5efa7c11970bf5c876c6bc86725dbe84200fe7c6253b95d.png",
+        "name": "Pastel Wooden Blocks Set"
+      },
+      {
+        "category": "Wooden Toys",
+        "url": "https://images.unsplash.com/photo-1714618888538-8d15a9228236?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHxoaWdoJTIwZW5kJTIwd29vZGVuJTIwdG95cyUyMGJvdXRpcXVlfGVufDB8fHx8MTc3ODgzOTAxMXww&ixlib=rb-4.1.0&q=85",
+        "name": "Handcrafted Wooden Animal Set"
+      }
+    ]
+  },
+  "specific_instructions_for_main_agent": [
+    "Use .js instead of .tsx for React components.",
+    "Implement a fully functional e-commerce flow (Single Vendor): Admin, Products, Orders, Cart, Wishlist, WhatsApp Contact.",
+    "Ensure the hero section uses the provided hero_banner image creatively - perhaps a split layout with large editorial typography on the left.",
+    "Product lists must use the media.products URLs provided. NEVER use placeholder text or dummy image URLs.",
+    "Global layout: Provide a floating WhatsApp button fixed at the bottom right at all times.",
+    "Contact logic: All inquiries/checkout should direct the user to WhatsApp with a pre-filled message using numbers +91 6375361590, +91 8824837553.",
+    "Color application: NEVER use black (#000000) for text. Use the provided text_heading (#2C4C3B) and text_body (#4A5D53).",
+    "Install lucide-react for icons.",
+    "Enforce data-testid attributes on all interactive elements (buttons, links, inputs)."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": "Comprehensive testing of Manghani Toy World (FastAPI + React HashRouter). 28/28 backend pytest cases passed across public endpoints, auth, orders, RBAC and admin endpoints. 19/20 frontend Playwright assertions passed (the one failure is a test-script selector issue, NOT a product bug — verified products grid renders via [data-testid^=\"product-card-\"]). End-to-end customer flow works: register → browse → add to cart → checkout → order-success → track. Admin login + RBAC + all 7 admin tabs (Dashboard, Products, Orders, Categories, Customers, Branding, Contact) work. HashRouter refresh works on /#/products without 404. Customer is blocked from /#/admin (redirects to /). WhatsApp/phone-only contact UI verified. No backend/frontend issues found.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_mtw_backend.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py: still uses deprecated @app.on_event('startup'/'shutdown') — works fine on FastAPI 0.110+ but consider migrating to lifespan handler in future.",
+    "server.py file ~615 lines — within acceptable limits but approaching the 700-line guideline; orders + products endpoints could be modularised if app grows.",
+    "GET /api/products enriches category_name in a per-product loop (N+1 lookups). Fine for current 8-product seed; consider single $lookup aggregation or in-memory cat_map for production scale.",
+    "JWT_SECRET is read from env (good). Tokens are 7-day with no refresh / revoke mechanism — acceptable for MVP, document if needed."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_mtw_backend.py (new)"
+  ],
+  "success_rate": {"backend": "100% (28/28)", "frontend": "95% (19/20, the single fail is test-script selector limitation, app works)"},
+  "test_credentials": "Admin admin@manghanitoyworld.com / Admin@123 — present in /app/memory/test_credentials.md and verified working. Customer accounts created via /#/register at runtime.",
+  "seed_data_creation": "Created throw-away customers (test_*@example.com), TEST_Cat_xxxx categories, one MTW-260515-557288 order during testing. Reset branding hero_subtitle and contact address back to defaults after testing.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "All endpoints under /api are healthy. Frontend uses HashRouter (URLs include /#/). Nav labels are Home/Shop/Track Order/Contact — data-testid for nav is nav-link-shop (not 'collection'). Product cards on listing have data-testid='product-card-<id>'. Admin sub-tabs nav testids: admin-nav-{dashboard|products|orders|categories|customers|branding|contact}. JWT stored in localStorage under 'mtw_token'. Backend seeds admin + 8 categories + 8 products + branding + contact on startup. pytest file is at /app/backend/tests/test_mtw_backend.py — re-run with: pytest /app/backend/tests/test_mtw_backend.py -v --junitxml=/app/test_reports/pytest/pytest_results.xml",
+  "rca of the issue": "N/A — no functional issues identified. Only test-script side: when probing product cards via generic 'a[href*=\"#/products/\"]' the navbar nav-link-shop link (href='#/products') also matches, polluting count; recommend selecting by [data-testid^='product-card-'] in future scripts."
+}
