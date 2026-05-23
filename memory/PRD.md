@@ -1,7 +1,7 @@
 # Manghani Toy World — Product Requirements Document
 
 ## Problem Statement (verbatim)
-Create a fully working, production-ready, ultra premium ecommerce website for a real client brand named "Manghani Toy World". Single Vendor Ecommerce: Admin manages products/orders/categories/branding/contact via UI. Customers browse, search, filter, cart, checkout, track orders, wishlist. Contact via WhatsApp/phone only (no email). Original ask: React (Vite) + Tailwind on GitHub Pages with Supabase. Substituted to React + Tailwind + FastAPI + MongoDB on Emergent stack for fully testable preview while preserving GitHub-Pages-style architecture (HashRouter).
+Create a fully working, production-ready, ultra premium ecommerce website for a real client brand named "Manghani Toy World". Single Vendor Ecommerce: Admin manages products/orders/categories/branding/contact via UI. Customers browse, search, filter, cart, checkout, track orders, wishlist. Contact via WhatsApp/phone only (no email). Original ask: React (Vite) + Tailwind on GitHub Pages with Supabase. Substituted to React + Tailwind + FastAPI + MongoDB on manghani-toy-world stack for fully testable preview while preserving GitHub-Pages-style architecture (HashRouter).
 
 ## Architecture
 - **Frontend**: React 19 + HashRouter + Tailwind + Shadcn UI + Recharts + Sonner toasts + Lucide icons + Axios. Custom design system (Pastel & Soft Boutique theme). JWT stored in `localStorage` under `mtw_token`. Cart & wishlist persisted in localStorage.

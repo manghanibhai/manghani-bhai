@@ -64,7 +64,7 @@ export function BrandingProvider({ children }) {
         if (!link) { link = document.createElement("link"); link.rel = "icon"; document.head.appendChild(link); }
         link.href = data.favicon_url;
       }
-      if (data?.brand_name) document.title = data.brand_name;
+      if (data?.brand_name) document.title = "Manghani Toy World - ";
     } catch (e) { notifyApiError(e, "Branding"); /* keep defaults */ }
   }, []);
   useEffect(() => { reload(); }, [reload]);
